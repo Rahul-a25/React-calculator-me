@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
-
+import "./Component/calculator.css"
+import Calculator from './Component/Calculator';
+import Display from './Component/Display';
+import { useState,useEffect } from 'react';
 function App() {
+  const [input,setInput]=useState("")
+  const [Show,SetShow]=useState("")
+  function click(e){
+    setInput(input+e);
+  }
+  function getResult(){
+    SetShow(eval(input))
+  }
+  function resetsfunc(){
+    SetShow("")
+    setInput("")
+  }
+  useEffect(()=>{
+    SetShow(input)
+
+  },[input])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+      <Display Show={Show} />
+      <Calculator click={click} getResult={getResult} resetsfunc={resetsfunc}/>
+      </div>
     </div>
   );
 }
