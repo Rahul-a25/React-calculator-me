@@ -1,0 +1,92 @@
+.maindiv{
+    margin: 50px auto;
+    background-color: black;
+     width: 450px;
+     height: 500px;
+  }
+    .content{
+   background-color: green;
+   color: white;
+    /* float: right; */
+    width: 94%;
+    text-align: right;
+    height: 5%;
+    font-size: 25px;
+   background-color: black;
+   padding: 12px;
+  }
+  
+  .container{
+    display: grid;
+   
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    width: 96%;
+    margin: 0px 10px;
+    height: 87%;
+   
+  }
+  .box{
+    padding: 15px;
+    background-color: #4d4d4d;
+    outline: none;
+    transition: 0.1s;
+    color: white;
+    font-size: 20px;
+  }
+  .box:hover{
+    
+    color: black;
+    border: 1px solid white;
+  }
+  .acwala{
+    grid-column:1/3 ;
+    background-color: brown;
+    
+  }
+  .zero{
+    grid-column: 1/3;
+    
+  }
+  .equal{
+    grid-column:4/5 ;
+    grid-row: 4/6;
+    background-color: rgb(88, 88, 234);
+  }
+  @media (max-width:480px) {
+    .maindiv{
+      /* height: 390px; */
+      /* margin: 100px auto; */
+      width: 389px;
+      height: 750px;
+    }
+    .App{
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container{
+      margin: 0px 0px;
+
+      height: 80%;
+      width: 100%;
+    }
+    .content{
+      padding: 50px;
+      width: 80%;
+      font-size: 50px;
+      
+    }
+    .container button{
+      font-weight: 400;
+      font-size: 30px;
+    }
+    .container #equal{
+      font-size: 50px;
+    }
+
+    
+
+    
+  }
